@@ -118,7 +118,10 @@ body {
     color: #f79be5;
     border: 1px solid #9f40e0;
     border-radius: 18px;
-    width: 110px;
+    width: 170px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 #date,
@@ -136,13 +139,13 @@ body {
 #date {
     position: absolute;
     top: 0%;
-    right: 3%;
+    right: 1%;
 }
 
 .search-engine {
     position: absolute;
     top: 0%;
-    left: 3%;
+    left: 1%;
 }
 
 #title {

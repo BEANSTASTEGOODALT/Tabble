@@ -51,7 +51,7 @@ window.addEventListener("keydown", function(event) {
 });
 
 function createGreeting() {
-    const greetings = ["Welcome!", "Hello!", "Greetings!", "Good to see you!", "Welcome back!", "Welcome to Tabble!", "The best new tab page!", "A website with a pulse!"];
+    const greetings = ["Welcome!", "Hello!", "Greetings!", "Good to see you!", "Welcome back!", "A site with a bit of personality!", "The best new tab page!", "A website with a pulse!"];
     const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
     greetingDiv.textContent = randomGreeting;
     if (Math.random() < 0.01) {
