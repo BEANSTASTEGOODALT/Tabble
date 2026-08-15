@@ -72,5 +72,3 @@ Tabble is hosted at tabble-nine.vercel.app
 
 
 # Thank you and have fun!
-
-**Welcome to Tabble.**
