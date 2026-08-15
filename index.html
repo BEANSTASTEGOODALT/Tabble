@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>Tabble</title>
 </head>
+
 <body>
+    <select id="searchEngine" class="search-engine">
+        <option class="search-option" value="https://www.google.com/search?q=">Google</option>
+        <option class="search-option" value="https://www.bing.com/search?q=">Bing</option>
+        <option class="search-option" value="https://search.yahoo.com/search?p=">Yahoo</option>
+        <option class="search-option" value="https://duckduckgo.com/?q=">DuckDuckGo</option>
+    </select>
+    <div id="date"></div>
+    <h1 id="title">Tabble</h1>
+    <h4 id="greeting">Welcome!</h4>
     <div id="clock"></div>
     <input type="text" id="searchInput" placeholder="Search...">
     <div id="sites">
-        <a href="https://www.google.com">Google</a>
-        <a href="https://www.youtube.com">YouTube</a>
-        <a href="https://www.reddit.com">Reddit</a>
-        <a href="https://www.wikipedia.org">Wikipedia</a>
-        <a href="https://www.github.com">GitHub</a>
-        <a href="https://www.stardance.space">Stardance</a>
+        <a class="site-link" href="https://www.google.com"><img width="32" height="32" src="https://www.google.com/favicon.ico" alt="Google" class="site-icon">
+            <div class="site-title">Google</div>
+        </a>
+        <a class="site-link" href="https://www.youtube.com"><img width="32" height="32" src="https://www.youtube.com/favicon.ico" alt="YouTube" class="site-icon">
+            <div class="site-title">YouTube</div>
+        </a>
+        <a class="site-link" href="https://www.reddit.com"><img width="32" height="32" src="https://www.reddit.com/favicon.ico" alt="Reddit" class="site-icon">
+            <div class="site-title">Reddit</div>
+        </a>
+        <a class="site-link" href="https://www.wikipedia.org"><img width="32" height="32" src="https://www.wikipedia.org/favicon.ico" alt="Wikipedia" class="site-icon">
+            <div class="site-title">Wikipedia</div>
+        </a>
+        <a class="site-link" href="https://www.github.com"><img width="32" height="32" src="https://www.github.com/favicon.ico" alt="GitHub" class="site-icon">
+            <div class="site-title">GitHub</div>
+        </a>
+        <a class="site-link" href="https://www.stardance.space"><img width="32" height="32" src="https://stardance.hackclub.com/assets/favicon-cdc48065.png" alt="Stardance" class="site-icon">
+            <div class="site-title">Stardance</div>
+        </a>
+        <a class="site-link" href="https://www.hackclub.com"><img width="32" height="32" src="https://hackclub.com/favicon.ico" alt="Hack Club" class="site-icon">
+            <div class="site-title">Hack Club</div>
+        </a>
     </div>
     <div id="news">
         Fetching news...
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

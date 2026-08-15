@@ -6,9 +6,11 @@
     font-family: "Bungee Spice", Arial, sans-serif;
     padding: 20px;
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
+    filter: hue-rotate(210deg);
+    text-shadow: 0 0 8px rgba(26, 233, 15, 0.808);
 }
 
 #searchInput {
@@ -20,9 +22,14 @@
     margin-top: 20px;
     font-family: "Changa One", Arial, sans-serif;
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgba(241, 224, 243, 0.671);
+    box-shadow: 0 0 10px rgba(150, 32, 161, 0.911);
+    color: #4e4e4e;
+    border: 1px solid #9f40e0;
+    border-radius: 18px;
 }
 
 body {
@@ -35,27 +42,29 @@ body {
     height: 100vh;
 }
 
-#sites, #news {
+#sites,
+#news {
     margin-top: 20px;
     border: 8px solid #3533333f;
     border-radius: 10px;
     background-color: rgba(35, 34, 34, 0.847);
     color: white;
-    padding: 20px;
-    max-width: 35%;
+    padding: 10px;
+    max-width: 20%;
     font-family: "Merriweather", Arial, sans-serif;
+    width: 20%;
 }
 
 #news {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 70%;
     transform: translateX(-50%);
 }
 
 #sites {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 30%;
     transform: translateX(-50%);
 }
@@ -72,8 +81,88 @@ body {
     font-family: "Merriweather", Arial, sans-serif;
 }
 
-.news-link {
+.news-link,
+.site-link {
     color: rgb(143, 143, 196);
     text-decoration: none;
     font-family: "Merriweather", Arial, sans-serif;
+}
+
+.site-icon {
+    vertical-align: middle;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.site-title {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Merriweather", Arial, sans-serif;
+}
+
+.site-link {
+    display: block;
+    margin-bottom: 3px;
+    font-family: "Merriweather", Arial, sans-serif;
+}
+
+
+.search-option,
+#date,
+.search-engine {
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Merriweather", Arial, sans-serif;
+    background-color: rgba(173, 173, 173, 0.671);
+    box-shadow: 0 0 10px rgba(225, 59, 240, 0.911);
+    color: #f79be5;
+    border: 1px solid #9f40e0;
+    border-radius: 18px;
+    width: 110px;
+}
+
+#date,
+.search-engine {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.search-option {
+    text-align: left;
+    background-color: #464444c0;
+    font-size: 0.85em;
+}
+
+#date {
+    position: absolute;
+    top: 0%;
+    right: 3%;
+}
+
+.search-engine {
+    position: absolute;
+    top: 0%;
+    left: 3%;
+}
+
+#title {
+    position: absolute;
+    top: -3%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Bungee Spice", Arial, sans-serif;
+    font-size: 4em;
+    text-shadow: 0 0 8px rgba(105, 179, 15, 0.801);
+    filter: hue-rotate(280deg);
+}
+
+#greeting {
+    position: absolute;
+    top: 11.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Changa One", Arial, sans-serif;
+    font-size: 1.2em;
+    color: #b5aaaad8;
+    text-shadow: 0 0 10px rgba(183, 15, 15, 0.863);
 }

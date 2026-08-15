@@ -1,9 +1,18 @@
 let clockDiv = document.getElementById("clock");
 let newsDiv = document.getElementById("news");
+let searchInput = document.getElementById("searchInput");
+let dateDiv = document.getElementById("date");
+let greetingDiv = document.getElementById("greeting");
 
 function updateClock() {
     clockDiv.textContent = new Date().toLocaleTimeString();
     requestAnimationFrame(updateClock);
+}
+
+function updateDate() {
+    const now = new Date();
+    dateDiv.textContent = now.toLocaleDateString();
+    requestAnimationFrame(updateDate);
 }
 
 async function getNews(proxy) {
@@ -21,7 +30,7 @@ async function getNews(proxy) {
         newsDiv.innerHTML = '';
         data.posts.slice(0, 2).forEach(post => {
             const postDiv = document.createElement('div');
-            postDiv.innerHTML = `<h5 class="news-title">${post.title}</h5><a href="${post.site_full}" class="news-link""><p class="news-summary">${post.summary.slice(0, 65)}...</p></a>`;
+            postDiv.innerHTML = `<h5 class="news-title">${post.title}</h5><a href="${post.thread.url}" class="news-link""><p class="news-summary">${post.summary.slice(0, 65)}...</p></a>`;
             newsDiv.appendChild(postDiv);
         });
     } catch (error) {
@@ -31,5 +40,26 @@ async function getNews(proxy) {
     }
 }
 
+window.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        if (document.activeElement === searchInput) {
+            const query = searchInput.value;
+            const searchEngine = document.getElementById("searchEngine").value;
+            window.location.href = `${searchEngine}${encodeURIComponent(query)}`;
+        }
+    }
+});
+
+function createGreeting() {
+    const greetings = ["Welcome!", "Hello!", "Greetings!", "Good to see you!", "Welcome back!", "Welcome to Tabble!", "The best new tab page!", "A website with a pulse!"];
+    const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+    greetingDiv.textContent = randomGreeting;
+    if (Math.random() < 0.01) {
+        greetingDiv.textContent = "You got the special greeting! (1/100 chance!)";
+    }
+}
+
+createGreeting();
 updateClock();
+updateDate();
 getNews('https://corsproxy.io/?key=9a40ef96&url=');
